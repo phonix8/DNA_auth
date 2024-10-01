@@ -38,12 +38,27 @@ python enhanced_dna_sequencing_simulation.py
 ```
 
 Follow the on-screen prompts to progress through each stage of the simulation.
+### DNA Authentication System
+
+1. Start the server:
+   ```
+   python dna_auth_server.py
+   ```
+2. Connect the Arduino Pro Micro to your computer.
+3. Run the client:
+   ```
+   python dna_auth_client.py
+   ```
+
+The client will read the DNA sequence from the Arduino and attempt to authenticate with the server.
 
 ## Output
 
-The simulation will generate two text files:
-- `original_genome.txt`: Contains the originally generated genome sequence
-- `assembled_genome.txt`: Contains the assembled genome sequence after fragmentation and reassembly
+- The DNA sequencing simulation will generate two text files:
+  - `original_genome.txt`: Contains the originally generated genome sequence
+  - `assembled_genome.txt`: Contains the assembled genome sequence after fragmentation and reassembly
+
+- The DNA authentication system will print the authentication result to the console.
 
 ## Contributing
 
