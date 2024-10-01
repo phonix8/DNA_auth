@@ -1,0 +1,20 @@
+// DNA sequence for authentication
+const String DNA_SEQUENCE = "ATCGATCGATCGATCGATCG";
+
+void setup() {
+  Serial.begin(9600);
+  while (!Serial) {
+    ; // wait for serial port to connect. Needed for native USB
+  }
+}
+
+void loop() {
+  if (Serial.available() > 0) {
+    String command = Serial.readStringUntil('\n');
+    command.trim();
+    
+    if (command == "GET_DNA") {
+      Serial.println(DNA_SEQUENCE);
+    }
+  }
+}
